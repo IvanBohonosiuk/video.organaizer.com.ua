@@ -14,8 +14,7 @@ class DashboardController extends Controller
 {
     public function index(User $user)
     {
-    	$this->data['user'] = getID();
 
-    	return view('dashboard.index', $this->data);
+    	return view('dashboard.index', ['user' => Auth::user()]);
     }
 }
