@@ -28,4 +28,15 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Comment');
     }
+
+    public function getID()
+    {
+        return $this->getIDs()
+            ->firstOrFail();
+    }
+
+    public function scopeGetIDs($query, $id)
+    {
+        $query->where(['id'=>$id]);
+    }
 }
