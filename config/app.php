@@ -162,6 +162,9 @@ return [
         // debug
         Barryvdh\Debugbar\ServiceProvider::class,
 
+        // image
+        Intervention\Image\ImageServiceProvider::class,
+
     ],
 
     /*
@@ -211,6 +214,9 @@ return [
 
         // debug
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        // image
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDashboardsTable extends Migration
+class Avatar extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateDashboardsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dashboards', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });
+        Schema::table('users', function(Blueprint $table)
+		{
+		    $table->string('avatar')->default('default.jpg');
+		});
     }
 
     /**
@@ -25,6 +25,6 @@ class CreateDashboardsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('dashboards');
+        //
     }
 }

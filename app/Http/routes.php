@@ -31,3 +31,4 @@ Route::get('/video/{url}', [
 Route::post('comment/add','CommentController@store');
 
 Route::get('/dashboard', 'DashboardController@index');
+Route::post('/dashboard', 'DashboardController@update_avatar');
